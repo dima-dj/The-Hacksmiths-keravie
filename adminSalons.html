@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kéravie Administration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: rgb(17, 17, 17, 0.8);
+            color: white;
+            min-height: 100vh;
+        }
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}.part2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:40px;
+}
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap:0px;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 415px;
+            background-color: #2a2a2a;
+            padding: 20px;
+           
+            border-radius: 15px;
+            margin: 20px;
+            margin-left: 5px;
+            margin-top: 0px;
+            margin-right: 0;
+            height:80vh;
+           
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 10px;
+        }.content{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+
+        .sidebar-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 8px;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: 500;
+             font-family: 'DM Serif Display';
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-menu a.active {
+            background-color: #BCE784;
+            color: #2a2a2a;
+        }
+
+        .sidebar-menu a:hover:not(.active) {
+            background-color: #404040;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            gap:100px;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            margin-left: 40px;
+        }
+
+        .logo {
+  font-size: 70px;
+  font-weight: bold;
+  position: relative;
+  font-family: 'Cormorant Garamond', serif;
+  display: inline-block;
+  margin: 0;
+  
+}
+
+.logo-k {
+  color: #BCE784; /* Vert clair */
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.logo-rest {
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.leaf-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: -25px;
+}
+
+.subtitle {
+  font-size: 28px;
+  color: #BCE784;
+  margin-left: 120px;
+  font-weight: 300;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+
+        /* Toggle Buttons */
+        .toggle-container {
+            display: flex;
+            background-color: #FFFAE8;
+          justify-content: space-between;
+            border-radius: 25px;
+            padding: 4px;
+            padding-left: 20px;
+             padding-right: 20px;
+            margin-bottom: 40px;
+            width: 70%;
+           
+        }
+
+        .toggle-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn.active-left {
+            background-color: #E76F51;
+            color: white;
+             font-family: 'DM Serif Display';
+             font-size: 16px;
+        }
+
+        .toggle-btn.inactive-right {
+            background-color: rgb(231, 111, 81, 0.8);
+            color: #ffffff;
+             font-family: 'DM Serif Display';
+              font-size: 16px;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #777;
+            padding-bottom: 10px;
+            font-family: 'DM Serif Display';
+        }
+
+        /* Salon Cards */
+        .salon-card {
+            display: flex;
+           justify-content:end;
+            align-items:end;
+            
+            margin-bottom: 20px;
+            padding: 15px 0;
+             gap: 150px;
+             font-family: 'DM Serif Display';
+        }
+
+        .salon-info {
+            display: flex;
+             justify-content: space-between;
+            align-items: center;
+            gap: 150px;
+
+        }
+
+        .salon-name {
+            font-size: 16px;
+            font-weight: 500;
+            
+        }
+
+        .salon-location {
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .salon-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-end;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-accept {
+            background-color: transparent;
+            color: #BCE784;
+            font-size: 20px;
+             font-family: 'DM Serif Display';
+           
+        }
+
+        .btn-refuse {
+            background-color: transparent;
+            color: #E76F51;
+            font-size: 20px;
+             font-family: 'DM Serif Display';
+            
+        }
+
+        .btn-details {
+            background-color: transparent;
+            color: white;
+            border: 1px solid #ffffff;
+           border-radius: 30% 70% 40% 60% / 50% 30% 70% 50%;
+
+            padding: 8px 20px;
+            font-size: 12px;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+        .settings{
+            font-size: 23px;
+             font-family: 'DM Serif Display';
+              cursor: pointer;
+        }.deconnexion{
+            font-size: 23px;
+             font-family: 'DM Serif Display';
+             background-color:  #E76F51;
+             color: white;
+             padding: 4px;
+             border-radius: 25px;
+             border: none;
+            cursor: pointer;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin: 10px;
+                border-radius: 10px;
+            }
+
+            .sidebar-menu {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            .sidebar-menu li {
+                margin-bottom: 0;
+            }
+
+            .sidebar-menu a {
+                padding: 8px 16px;
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
+            .main-content {
+                padding: 10px;
+            }
+
+            .logo {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .salon-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .salon-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                padding: 20px;
+                background-color: #404040;
+                border-radius: 10px;
+            }
+
+            .salon-actions {
+                width: 100%;
+                align-items: stretch;
+            }
+
+            .action-buttons {
+                justify-content: center;
+            }
+
+            .toggle-container {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .toggle-btn {
+                flex: 1;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+                margin-left: 10px;
+            }
+
+            .salon-info {
+                gap: 5px;
+            }
+
+            .toggle-btn {
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <header class="header">
+        <div class="part1">
+  <h1 class="logo">
+    <span class="logo-k">K</span><span class="logo-rest">éravie</span>
+    <img src="feuille.png" alt="feuille" class="leaf-icon">
+  </h1>
+  <p class="subtitle">Administration</p></div>
+  <div class="part2">
+   <p class="settings">Pramètres</p>
+   <button class="deconnexion">Déconnexion</button></div>
+
+</header>
+
+       
+
+        <main class="main-content">
+             <nav class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active">Gestion des coiffeurs membres</a></li>
+                <li><a href="#">Gestion des entreprises inscrites</a></li>
+                <li><a href="#">Gestion des visioconférences</a></li>
+                <li><a href="#">Gestion des produits et achats</a></li>
+                <li><a href="#">Statistiques</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="toggle-container">
+                <button class="toggle-btn active-left">Demandes d'inscription en attente</button>
+                <button class="toggle-btn inactive-right">Statuts des coiffeurs</button>
+            </div>
+
+            <section>
+                <h2 class="section-title">Ces salons sont en attente de validation</h2>
+                
+                <div class="salon-card">
+                    <div class="salon-info">
+                        <span class="salon-name">"Cercle Hair & Beauty"</span>
+                        <span class="salon-location">Chéraga</span>
+                    </div>
+                    <div class="salon-actions">
+                        <div class="action-buttons">
+                            <button class="btn btn-accept">Accepter</button>
+                            <button class="btn btn-refuse">Refuser</button>
+                        </div>
+                        <button class="btn btn-details">Voir plus de détails</button>
+                    </div>
+                </div>
+
+                <div class="salon-card">
+                    <div class="salon-info">
+                        <span class="salon-name">"Lady Club"</span>
+                        <span class="salon-location">Dar El Beida</span>
+                    </div>
+                    <div class="salon-actions">
+                        <div class="action-buttons">
+                            <button class="btn btn-accept">Accepter</button>
+                            <button class="btn btn-refuse">Refuser</button>
+                        </div>
+                        <button class="btn btn-details">Voir plus de détails</button>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
