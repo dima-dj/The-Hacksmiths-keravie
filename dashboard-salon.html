@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kéravie</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" onerror="this.style.display='none'">
+            </div>
+            <button class="disconnect-btn">Déconnexion</button>
+        </div>
+
+        <div class="curved-line">
+            <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+                <path d="M0,40 Q200,10 400,40 T800,40 Q1000,65 1200,40" stroke="#000000" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+
+        <div class="heart-container">
+            <img src="images/scissors.png" alt="Heart" onerror="this.innerHTML='❤️'; this.style.fontSize='32px'">
+        </div>
+
+        <div class="main-content">
+            <h1 class="main-title">
+                <span class="grace">Grâce</span> <span class="vous">à vous</span>,<br>
+                chaque mèche<br>
+                compte !
+            </h1>
+
+            <p class="subtitle">
+                Ton kit est plein ?<br>
+                Clique ici pour nous le signaler.
+            </p>
+
+            <div class="kit-button-container">
+                <div class="white-arrow-before">
+                    <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                        <path d="M5,10 Q25,3 50,10 Q75,17 90,10" stroke="white" stroke-width="2" fill="none"/>
+                        <polygon points="90,7 98,10 90,13" fill="white"/>
+                    </svg>
+                </div>
+                <div class="white-arrow-after">
+                    <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                        <path d="M95,10 Q75,17 50,10 Q25,3 10,10" stroke="white" stroke-width="2" fill="none"/>
+                        <polygon points="10,7 2,10 10,13" fill="white"/>
+                    </svg>
+                </div>
+                <button class="kit-button">kit plein</button>
+            </div>
+
+            <div class="info-section">
+                <div class="info-box">
+                    <p class="info-text">
+                        Une fois situé tu as prévenu.<br>
+                        Nous commençons à planifier la collecte dans un délai maximum de <span class="highlight">48 heures</span>.<br>
+                        En attendant, tu peux continuer à collecter tes cheveux. On a ça sous contrôle !
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <p class="info-text">
+                        Pour assurer le bon fonctionnement du projet, nous effectuerons<br>
+                        une visite de vérification et aucun signalement n'est reçu par ici 3<br>
+                        mois.<br>
+                        Cette visite permettra de faire le point sur la participation du salon et le<br>
+                        besoin développer la collaboration.
+                    </p>
+                </div>
+
+                <div class="verification-section">
+                    <div class="verification-text">Prochaine vérification automatique dans:</div>
+                    <div class="days-count">38 jours</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="problem-section">
+            <div class="problem-title" id="problemToggle">
+                Signaler un problème ?
+            </div>
+            <div class="problem-container">
+                <div class="problem-form" id="problemForm">
+                    <form id="reportForm">
+                        <div class="form-group">
+                            <label for="problemType">Type de problème :</label>
+                            <select id="problemType" required>
+                                <option value="">Choisissez le type de problème</option>
+                                <option value="collecte">Problème de collecte</option>
+                                <option value="boite">Problème avec la boîte</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description du problème :</label>
+                            <textarea id="description" placeholder="Décrivez votre problème en détail..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Envoyer le signalement</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <img src="/images/logo.png" alt="Kéravie Logo" class="footer-logo" />
+      <p>
+        Un mouvement algérien pour recycler les cheveux, dépolluer les ports,
+        et inspirer un avenir durable à travers les salons de coiffure.
+      </p>
+    </div>
+
+    <div class="footer-section links">
+      <h4>Liens utiles</h4>
+      <ul>
+        <li><a href="#boutique">Boutique</a></li>
+        <li><a href="#connexion">Connexion</a></li>
+        <li><a href="#nos-coiffeurs">Nos coiffeurs</a></li>
+        <li><a href="#">Devenir membre</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contact</h4>
+      <p>Email : contact@keravie.dz</p>
+      <p>Téléphone : +213 123 456 789</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Kéravie | Tous droits réservés
+  </div>
+</footer>
+
+    
+    <script src="dashboard-script.js"></script>
+</body>
+</html>

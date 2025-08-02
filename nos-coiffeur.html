@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keravie - Salons membres</title>
+  <link rel="stylesheet" href="coiffeur_styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlap-wrapper">
+    <div class="header">
+      <img src="/images/logo.png" alt="Keravie Logo" />
+      
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#boutique">Boutique</a></li>
+          <li><a href="#connexion">Connexion</a></li>
+          <li><a href="#nos-coiffeurs">Nos coiffeurs</a></li>
+        </ul>
+        <input class="button" type="button" value="Devenir un coiffeur membre" />
+      </nav>
+    </div>
+
+    <div class="main-container">
+      <h1><span class="nos-salons">Nos salons</span> <span class="partenaires">partenaires</span></h1>
+      <p class="subtext">Cliquez sur le salon qui vous intéresse & accédez directement à la page du coiffeur</p>
+
+      <div class="search-wrapper">
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Entereez votre localisation" />
+          <div class="search-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="8" stroke="#999" stroke-width="2"/>
+              <path d="m21 21-4.35-4.35" stroke="#999" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="maps-illustration">
+          <img src="/images/maps.png" alt="Maps illustration" />
+        </div>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="salon-list" id="salonList"></div>
+        <div class="map-box" id="mapBox">
+          <div class="map-placeholder" id="mapPlaceholder">
+            <h3>Nos coiffeurs</h3>
+            <p>Sélectionnez un salon pour voir son emplacement ici.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <img src="/images/logo.png" alt="Kéravie Logo" class="footer-logo" />
+      <p>
+        Un mouvement algérien pour recycler les cheveux, dépolluer les ports,
+        et inspirer un avenir durable à travers les salons de coiffure.
+      </p>
+    </div>
+
+    <div class="footer-section links">
+      <h4>Liens utiles</h4>
+      <ul>
+        <li><a href="#boutique">Boutique</a></li>
+        <li><a href="#connexion">Connexion</a></li>
+        <li><a href="#nos-coiffeurs">Nos coiffeurs</a></li>
+        <li><a href="#">Devenir membre</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contact</h4>
+      <p>Email : contact@keravie.dz</p>
+      <p>Téléphone : +213 123 456 789</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Kéravie | Tous droits réservés
+  </div>
+</footer>
+
+  <script src="coiffeur-script.js"></script>
+</body>
+</html>

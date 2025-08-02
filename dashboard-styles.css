@@ -1,0 +1,663 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap");
+/* Verification section */
+.verification-section {
+    all: unset; /* resets all inherited styles */
+    text-align: center;
+    margin: 40px 0;
+}
+
+.verification-text {
+    font-size: 18px;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.days-count {
+    font-size: 32px;
+    font-weight: bold;
+    color: #8BC34A;
+}
+
+
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #4a4a4a;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+    line-height: 1.6;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 48px;
+    font-weight: normal;
+    color: #8BC34A;
+    font-family: serif;
+}
+
+.logo img {
+    width: 200px;              /* Controls the "length" of the logo */
+    height: auto;              /* Keeps aspect ratio */
+    max-width: 100%;           /* Prevents overflow on smaller screens */
+    object-fit: contain;       /* Ensures image scales nicely */
+}
+
+.disconnect-btn {
+    background: #E76F51;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.disconnect-btn:hover {
+    background: #e55a42;
+}
+
+/* Curved line */
+.curved-line {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    z-index: 1;
+}
+
+.curved-line svg {
+    width: 100%;
+    height: 100px;
+}
+
+/* Heart */
+.heart-container {
+    position: absolute;
+    top: 170px;
+    left: 120px;
+    z-index: 10;
+}
+
+.heart-container img {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+}
+
+/* Main content */
+.main-content {
+    text-align: center;
+    margin-top: 280px;
+    z-index: 5;
+    position: relative;
+    width: 100%;
+}
+
+.main-title {
+    font-size: 64px;
+    font-weight: normal;
+    margin-bottom: 50px;
+    line-height: 1.2;
+    font-family: serif;
+}
+
+.main-title .grace {
+    color: white;
+}
+
+.main-title .vous {
+    color: #BCE784;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Kit button */
+.kit-button-container {
+    position: relative;
+    margin: 40px 0 60px 0;
+}
+
+.white-arrow-before,
+.white-arrow-after {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    z-index: 1;
+}
+
+.white-arrow-before {
+    top: 70px;
+    right: -180px;
+}
+
+.white-arrow-after {
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.white-arrow-before svg,
+.white-arrow-after svg {
+    width: 100%;
+    height: 30px;
+    opacity: 1;
+}
+
+.kit-button {
+    background: #BCE784;
+    color: #2c2c2c;
+    border: none;
+    padding: 20px 50px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.kit-button:hover {
+    background: #7CB342;
+}
+
+.kit-button.notified {
+    background: #FF6B4A;
+    color: white;
+    cursor: default;
+}
+
+.kit-button.notified:hover {
+    background: #FF6B4A;
+}
+
+/* Info section */
+.info-section {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    width: 100%;
+}
+
+.info-box {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: left;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    font-weight: 500;
+}
+
+.info-text {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #e0e0e0;
+}
+
+.info-text .highlight {
+    color: #FF6B4A;
+    font-weight: bold;
+}
+
+
+
+/* Problem section */
+.problem-section {
+    margin-top: 80px;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.problem-title {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 0;
+    cursor: pointer;
+    color: white;
+    font-family: serif;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.problem-title:hover {
+    color: #BCE784;
+    text-decoration-color: #BCE784;
+}
+
+.problem-form {
+    display: none;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.problem-form.active {
+    display: block;
+    animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #BCE784;
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #666;
+    border-radius: 8px;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #BCE784;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+.submit-btn {
+    background: #BCE784;
+    color: #2c2c2c;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #7CB342;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .main-title {
+        font-size: 54px;
+    }
+
+    .white-arrow-before {
+        right: -150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+        top: 20px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .logo img {
+        width: 180px;
+    }
+
+    .disconnect-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .curved-line {
+        top: 120px;
+    }
+
+    .heart-container {
+        top: 145px;
+        left: 80px;
+    }
+
+    .heart-container img {
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+    }
+
+    .main-content {
+        margin-top: 220px;
+    }
+
+    .main-title {
+        font-size: 42px;
+        margin-bottom: 40px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .kit-button {
+        padding: 16px 40px;
+        font-size: 18px;
+    }
+
+    .white-arrow-before,
+    .white-arrow-after {
+        width: 120px;
+        height: 25px;
+    }
+
+    .white-arrow-before {
+        right: -130px;
+        top: 60px;
+    }
+
+    .white-arrow-after {
+        bottom: -50px;
+    }
+
+    .info-box {
+        padding: 25px;
+        margin: 25px 0;
+    }
+
+    .info-text {
+        font-size: 14px;
+    }
+
+    .verification-section {
+        padding: 30px;
+    }
+
+    .verification-text {
+        font-size: 16px;
+    }
+
+    .days-count {
+        font-size: 28px;
+    }
+
+    .problem-title {
+        font-size: 24px;
+    }
+
+    .problem-form {
+        padding: 30px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group select,
+    .form-group textarea {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        padding: 16px 32px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 0 15px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .disconnect-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+        align-self: flex-end;
+    }
+
+    .main-content {
+        margin-top: 200px;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .kit-button {
+        padding: 14px 30px;
+        font-size: 16px;
+    }
+
+    .white-arrow-before,
+    .white-arrow-after {
+        display: none; /* Hide arrows on very small screens */
+    }
+
+    .info-box {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .info-text {
+        font-size: 13px;
+    }
+
+
+
+
+.verification-text {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+    font-family: "Poppins", sans-serif;
+}
+
+.days-count {
+    color: #8BC34A;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+    .problem-title {
+        font-size: 20px;
+    }
+
+    .problem-form {
+        padding: 25px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .form-group textarea {
+        height: 120px;
+    }
+
+    .submit-btn {
+        padding: 14px 28px;
+        font-size: 14px;
+    }
+}
+
+/*fotter*/
+.footer {
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: "DM Serif Display", serif;
+}
+
+.footer-logo {
+  width: 150px;      /* Adjust as needed */
+  height: auto;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 240px;
+}
+
+.footer-section h4 {
+  color: #BCE784;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #555;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* 🌐 Responsive */
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+}
+
+

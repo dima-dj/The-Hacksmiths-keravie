@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keravie</title>
+  <link rel="stylesheet" href="connexion-styles.css" />
+</head>
+<body>
+  <div class="overlap-wrapper">
+    <div class="header">
+      <img src="images/logo.png" alt="Keravie Logo" />
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#boutique">Boutique</a></li>
+          <li><a href="#connexion">Connexion</a></li>
+          <li><a href="#nos-coiffeurs">Nos coiffeurs</a></li>
+        </ul>
+        <input class="button" type="button" value="Devenir un coiffeur membre" />
+      </nav>
+    </div>
+
+    <section class="login-section" id="connexion">
+      <h2>Connexion à votre espace</h2>
+      <form id="login-form" class="login-form">
+        <label for="email">Email :</label>
+        <input type="email" id="email" placeholder="votre@email.com" required />
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" placeholder="******" required />
+
+        <div class="remember">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Se souvenir de moi</label>
+        </div>
+
+        <button type="submit" class="button">Se connecter</button>
+
+        <p class="alt">──────────── ou ────────────</p>
+        <p class="create-account">Pas encore inscrit ? <a href="#">Créer un compte</a></p>
+      </form>
+    </section>
+  </div>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <img src="/images/logo.png" alt="Kéravie Logo" class="footer-logo" />
+      <p>
+        Un mouvement algérien pour recycler les cheveux, dépolluer les ports,
+        et inspirer un avenir durable à travers les salons de coiffure.
+      </p>
+    </div>
+
+    <div class="footer-section links">
+      <h4>Liens utiles</h4>
+      <ul>
+        <li><a href="#boutique">Boutique</a></li>
+        <li><a href="#connexion">Connexion</a></li>
+        <li><a href="#nos-coiffeurs">Nos coiffeurs</a></li>
+        <li><a href="#">Devenir membre</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section contact">
+      <h4>Contact</h4>
+      <p>Email : contact@keravie.dz</p>
+      <p>Téléphone : +213 123 456 789</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Kéravie | Tous droits réservés
+  </div>
+</footer>
+
+  <script src="connexion-script.js"></script>
+</body>
+</html>
