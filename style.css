@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+body {
+  background-color: #414141;
+  font-family: "DM Serif Display", serif;
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+/* Logo image */
+header img {
+  height: 80px;
+}
+
+/* Navigation container */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Navigation list */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav links */
+.main-nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  color: #E76F51;
+}
+
+/* Button style */
+.button {
+  background-color: #E76F51;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #d85e43;
+}
+
+.hero-title{
+    position: absolute;
+    width: 1627px;
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+
+
+}
+h2 .highlight{
+    color: #BCE784;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  padding: 20px;
+  margin: 0 auto;
+}
+.recycla{
+    display: flex;
+  flex-direction: row;
+}
+.yit{
+     position: relative;
+  height: 50px;
+
+}
+.cute{
+    position: absolute;
+  top: 300px;
+  left: 300px;
+  
+  height: 80px;
+  
+}
+
+
+.hero-subtitle {
+  position: relative;
+  width: fit-content;
+  font-size: 20px;
+  text-align: center;
+  line-height: normal;
+  color: #ffffff;
+  
+  
+}
+
+.cta-button {
+  background-color: #d85e43;
+  color: white;
+  padding: 10px 20px;
+  border-radius: none;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+.highlight {
+  color: #a3e635;
+}
+
+/* How it works */
+.how-it-works {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.steps-title{
+  color: #BCE784;
+    
+}
+h3{
+    color: #BCE784;
+    font-size: 28px;
+
+
+}
+h4,p{
+    color: #fff;
+}
+
+.step {
+  background-color: #3f3f3f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+}
+
+.step h4 {
+  margin-bottom: 10px;
+}
+
+/* Benefits */
+.benefits {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.benefit-card {
+  background-color: #373737;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Join Movement */
+.join-movement {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Recycling Process */
+.recycling-process {
+  text-align: center;
+  padding: 40px 20px;
+}
+.boudin{
+  height: 160px;
+}
+.product-showcase {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #3f3f3f;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+.card-produit{
+    display: flex;
+  flex-direction: column;
+
+}
+
+.footer {
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: "DM Serif Display", serif;
+}
+
+.footer-logo {
+  width: 150px;      
+  height: auto;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 240px;
+}
+
+.footer-section h4 {
+  color: #BCE784;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #555;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+}
