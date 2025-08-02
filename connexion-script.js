@@ -25,19 +25,13 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
     return;
   }
 
-  if (email === "salon@example.com" && password === "123456") {
-    if (remember) {
-      localStorage.setItem("savedEmail", email);
-    } else {
-      localStorage.removeItem("savedEmail");
-    }
-
-    alert("Connexion réussie !");
-    window.location.href = "dashboard-salon.html";
+  // Accept any email and password
+  if (remember) {
+    localStorage.setItem("savedEmail", email);
   } else {
-    alert("Email ou mot de passe incorrect.");
+    localStorage.removeItem("savedEmail");
   }
-});
 
-//Email: salon@example.com
-//Password: 123456
+  alert("Connexion réussie !");
+  window.location.href = "dashboard-salon.html";
+});
