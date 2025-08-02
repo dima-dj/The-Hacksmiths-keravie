@@ -66,6 +66,23 @@ header img {
   background-color: #d85e43;
 }
 
+/* Style for nav buttons (Boutique, Connexion, Nos coiffeurs) */
+.nav-link-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.nav-link-button:hover {
+  color: #E76F51;
+}
+
+
 .hero-title{
     position: absolute;
     width: 1627px;

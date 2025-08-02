@@ -10,20 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="overlap-wrapper">
-    <div class="header">
-      <img src="/images/logo.png" alt="Keravie Logo" />
-      
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#boutique">Boutique</a></li>
-          <li><a href="#connexion">Connexion</a></li>
-          <li><a href="#nos-coiffeurs">Nos coiffeurs</a></li>
-        </ul>
-        <input class="button" type="button" value="Devenir un coiffeur membre" />
-      </nav>
-    </div>
+<header>
+  <img src="/images/logo1.png" alt="Keravie Logo" />
 
+  <nav class="main-nav">
+    <ul>
+      <li><button class="nav-link-button" onclick="window.location.href='boutique.html'">Boutique</button></li>
+      <li><button class="nav-link-button" onclick="window.location.href='connexion.html'">Connexion</button></li>
+      <li><button class="nav-link-button" onclick="window.location.href='nos-coiffeur.html'">Nos coiffeurs</button></li>
+    </ul>
+
+    <input class="button" type="button" value="Devenir un coiffeur membre" onclick="window.location.href='devenir-coiffeur-member.html'" />
+  </nav>
+</header>
     <div class="main-container">
       <h1><span class="nos-salons">Nos salons</span> <span class="partenaires">partenaires</span></h1>
       <p class="subtext">Cliquez sur le salon qui vous intéresse & accédez directement à la page du coiffeur</p>

@@ -7,19 +7,20 @@
   <link rel="stylesheet" href="connexion-styles.css" />
 </head>
 <body>
-  <div class="overlap-wrapper">
-    <div class="header">
-      <img src="images/logo.png" alt="Keravie Logo" />
+<header>
+  <img src="/images/logo1.png" alt="Keravie Logo" />
 
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#boutique">Boutique</a></li>
-          <li><a href="#connexion">Connexion</a></li>
-          <li><a href="#nos-coiffeurs">Nos coiffeurs</a></li>
-        </ul>
-        <input class="button" type="button" value="Devenir un coiffeur membre" />
-      </nav>
-    </div>
+  <nav class="main-nav">
+    <ul>
+      <li><button class="nav-link-button" onclick="window.location.href='boutique.html'">Boutique</button></li>
+      <li><button class="nav-link-button" onclick="window.location.href='connexion.html'">Connexion</button></li>
+      <li><button class="nav-link-button" onclick="window.location.href='nos-coiffeur.html'">Nos coiffeurs</button></li>
+    </ul>
+
+    <input class="button" type="button" value="Devenir un coiffeur membre" onclick="window.location.href='devenir-coiffeur-member.html'" />
+  </nav>
+</header>
+
 
     <section class="login-section" id="connexion">
       <h2>Connexion à votre espace</h2>

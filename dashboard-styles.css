@@ -72,6 +72,8 @@ body {
     font-family: serif;
 }
 
+
+
 .logo img {
     width: 200px;              /* Controls the "length" of the logo */
     height: auto;              /* Keeps aspect ratio */
